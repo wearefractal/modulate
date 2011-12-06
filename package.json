@@ -1,0 +1,25 @@
+{
+   "name":"modulate",
+   "description":"namespaced module loader",
+   "version":"0.0.1",
+   "homepage":"http://github.com/wearefractal/modulate",
+   "repository":"git://github.com/wearefractal/modulate",
+   "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
+    "main":"./modulate.coffee",
+
+   "engines":{
+      "node":">= 0.4.0"
+   },
+    
+   "devDependencies":{
+      "should":"*"
+   },
+
+   "licenses":[
+      {
+         "type":"MIT",
+         "url":"http://github.com/wearefractal/modulate/raw/master/LICENSE"
+      }
+   ]
+}
+
