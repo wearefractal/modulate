@@ -1,3 +1,3 @@
 module.exports =
 
-#  domainDir: "domain"
+  domainDir: "domain"

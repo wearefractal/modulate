@@ -1,8 +1,7 @@
 require('coffee-script');
-path = require 'path'
-getAppRoot = require './services/getAppRoot'
+getAppRoot    = require './services/getAppRoot'
 getDomainRoot = require './services/getDomainRoot'
-load = require './services/load'
+load          = require './services/load'
 
 class Modulate
   constructor: ->
@@ -14,12 +13,3 @@ class Modulate
 
 
 module.exports = new Modulate()
-
-
-###   
-    # we make the assumption modulate is in node_modules
-    @appRoot = path.join __dirname, ".." # one up
-
-    @domainRoot = @appRoot + "/"
-    if config.domainDir? then @domainRoot += "#{config.domainDir}/"
-
