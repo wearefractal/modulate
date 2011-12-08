@@ -1,11 +1,10 @@
-require 'protege'
 isDomainModule = require './isDomainModule'
 getModulePath = require './getModulePath'
 
-load = (domainRoot, namespace) ->
+load = (namespace) ->
 
   if isDomainModule namespace
-    return require( getModulePath domainRoot, namespace )
+    return require( getModulePath namespace )
   else return require namespace
 
 

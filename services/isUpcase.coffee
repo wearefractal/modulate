@@ -1,5 +1,4 @@
 require 'protege'
-
 # factor out to protege
 
 isUpcase = (word) ->
