@@ -4,23 +4,20 @@ path = require 'path'
 should = require 'should'
 load = require '../load'
 
+domainRoot = path.resolve '.' # current dir (services/specs/)
+
 #>> When I try to load a regular module
 
-useless = load 'useless'
+useless = load domainRoot, 'useless'
 
 #>> Then
 
 useless.should.have.property 'do'
 
 
-#>> Given a fake domain path
-
-global.rzr = {}
-rzr.DOMAIN_ROOT = path.resolve '.' # current dir (services/specs/)
-
 #>> When I try to load a domain module
 
-bar = load 'foo.bar'
+bar = load domainRoot, 'foo.bar'
 
 #>> Then
 

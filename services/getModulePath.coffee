@@ -1,7 +1,7 @@
 path = require 'path'
 getArtifactType = require './getArtifactType'
 
-getModulePath = (namespace) ->
+getModulePath = (domainRoot, namespace) ->
 
   names    = namespace.split '.' 
   artifact = names.pop()
@@ -11,7 +11,7 @@ getModulePath = (namespace) ->
   ns.push (getArtifactType artifact) + "s" # make plural
   ns.push artifact
 
-  return path.join rzr.DOMAIN_ROOT, (ns.join '/')
+  return path.join domainRoot, (ns.join '/')
 
 
 module.exports = getModulePath

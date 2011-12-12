@@ -1,10 +1,10 @@
 isDomainModule = require './isDomainModule'
 getModulePath = require './getModulePath'
 
-load = (namespace) ->
+load = (domainRoot, namespace) ->
 
   if isDomainModule namespace
-    return require( getModulePath namespace )
+    return require( getModulePath domainRoot, namespace )
   else return require namespace
 
 

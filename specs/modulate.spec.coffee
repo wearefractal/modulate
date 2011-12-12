@@ -2,8 +2,10 @@
 
 path = require 'path'
 should = require 'should'
-modulate = require '../modulate'
+modulate = require('../modulate')#('foo')
 
+console.log modulate
+###
 #>> When I load a regular module
 
 useless = modulate.load 'useless'
@@ -17,7 +19,7 @@ useless.should.have.property "do"
 #>> Given a fake domain path
 
 global.rzr = {}
-rzr.DOMAIN_ROOT = path.resolve './services/specs/' 
+domainRoot = path.resolve './services/specs/' 
 
 #>> When I try to load a domain module
 
