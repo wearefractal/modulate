@@ -6,7 +6,6 @@ appRoot ?= path.join __dirname, "../.."
 config = require( path.join appRoot, "config/config" )
 domainRoot = path.join appRoot, config.domainDir
 
-
 Modulate =
     
   load: (namespace) -> load domainRoot, namespace
