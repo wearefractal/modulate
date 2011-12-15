@@ -1,6 +1,6 @@
-require 'protege'
+isDomainModule = (namespace) -> 
 
-isDomainModule = (namespace) -> return (namespace.contains '.')
+  return (namespace.indexOf('.') > -1)
 
 
 module.exports = isDomainModule

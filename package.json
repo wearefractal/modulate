@@ -12,7 +12,6 @@
    },
 
    "dependencies":{
-      "protege":"*",
       "coffee-script":"*"
    },
     
