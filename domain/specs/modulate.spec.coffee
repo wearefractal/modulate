@@ -13,7 +13,6 @@ useless = modulate.load 'useless'
 useless.should.be.ok
 useless.should.have.property "do"
 
-
 #>> When I try to load a domain module
 
 bar = modulate.load 'foo.bar'

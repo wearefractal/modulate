@@ -5,7 +5,7 @@
    "homepage":"http://github.com/wearefractal/modulate",
    "repository":"git://github.com/wearefractal/modulate",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
-    "main":"./modulate.coffee",
+    "main":"./domain/modulate.coffee",
 
    "engines":{
       "node":">= 0.4.0"
