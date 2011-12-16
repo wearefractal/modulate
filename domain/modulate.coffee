@@ -1,10 +1,7 @@
 path = require 'path'
 load = require './services/load'
 
-Modulate = ({appRoot, domainDir}) ->
-
-  domainDir ?= 'domain'  
-  domainRoot = path.join appRoot, domainDir
+Modulate = ({moduleRoot, domainRoot}) ->
 
   modulate =   
     load: (namespace) -> load domainRoot, namespace
