@@ -9,14 +9,23 @@ getModulePath = (domainRoot, namespace) ->
 
   ns = []
 
-  if module is "services" or module is "models"
-    ns.push module
-    ns.push artifact
-  
-  else   
-    ns.push name for name in names
-    ns.push (getArtifactType artifact) + "s" # make plural
-    ns.push artifact
+  switch module
+    when 'services', 'models'      
+      ns.push module
+      ns.push artifact
+    else
+      switch artifact
+        when 'config'
+          ns.push module
+          ns.push artifact
+        when 'agent'
+          ns.push module
+          ns.push "#{module}.agent"  
+        else   
+          ns.push name for name in names
+          ns.push (getArtifactType artifact) + "s" # make plural
+          ns.push artifact
+
 
   return path.join domainRoot, (ns.join '/')
 
