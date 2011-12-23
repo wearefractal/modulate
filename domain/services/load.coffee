@@ -1,3 +1,4 @@
+path = require 'path'
 isDomainModule = require './isDomainModule'
 getModulePath = require './getModulePath'
 
