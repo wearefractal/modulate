@@ -5,7 +5,13 @@ load = (domainRoot, namespace) ->
 
   if isDomainModule namespace
     return require( getModulePath domainRoot, namespace )
-  else return require namespace
+  else 
+    nmPath = path.resolve domainRoot, '..', "node_modules", namespace
+    try
+      mod = require nmPath
+      return mod
+    catch e
+      return require namespace      
 
 
 module.exports = load

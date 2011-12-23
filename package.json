@@ -1,7 +1,7 @@
 {
    "name":"modulate",
    "description":"namespaced module loader",
-   "version":"0.0.3",
+   "version":"0.0.4",
    "homepage":"http://github.com/wearefractal/modulate",
    "repository":"git://github.com/wearefractal/modulate",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
