@@ -1,7 +1,7 @@
 {
    "name":"modulate",
    "description":"namespaced module loader",
-   "version":"0.0.5",
+   "version":"0.0.6",
    "homepage":"http://github.com/wearefractal/modulate",
    "repository":"git://github.com/wearefractal/modulate",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
@@ -14,7 +14,7 @@
    "dependencies":{
       "coffee-script":"*"
    },
-    
+
    "devDependencies":{
       "should":"*"
    },
