@@ -15,12 +15,13 @@ useless = modulate.load 'useless'
 #>> Then
 
 useless.should.be.ok
-useless.should.have.property "do"
+useless.should.be.a 'string'
+useless.should.match /require/
 
 
 #>> When I try to load a domain module
 
-bar = modulate.load 'foo.bar'
+bar = eval(modulate.load 'foo.bar')
 
 #>> Then
 

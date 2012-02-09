@@ -12,7 +12,7 @@ useless = load domainRoot, 'useless'
 
 #>> Then
 
-useless.should.have.property 'do'
+useless.should.equal "require('useless')"
 
 
 #>> When I try to load a domain module
@@ -21,4 +21,8 @@ bar = load domainRoot, 'foo.bar'
 
 #>> Then
 
-bar.test().should.be.true
+# check vs expected string
+bar.should.equal "require('#{domainRoot}/foo/services/bar')"
+
+# eval the result
+eval(bar).test().should.be.true
